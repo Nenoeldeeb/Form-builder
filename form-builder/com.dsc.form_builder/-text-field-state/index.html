@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>TextFieldState</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            form-builder
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":form-builder:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="form-builder::com.dsc.form_builder/TextFieldState///PointingToDeclaration//-1802973628">
+  <div class="breadcrumbs"><a href="../../../index.html">form-builder</a><span class="delimiter">/</span><a href="../index.html">com.dsc.form_builder</a><span class="delimiter">/</span><span class="current">TextFieldState</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Text</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>State</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">TextFieldState</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">initial<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter ">transform<span class="token operator">: </span><a href="../-transform/index.html">Transform</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">validators<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-validators/index.html">Validators</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf()</span></span><span class="token punctuation">)</span> : <a href="../-base-state/index.html">BaseState</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt; </span></div><p class="paragraph">This class represents the state of a single form field. It overrides members from <a href="../-base-state/index.html">BaseState</a>. It manages validations for individual form fields inputs (field states) for example email, passwords, etc. It also helps keep track of form field input changes and pass updates to the onValueChange callback.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph"><a href="https://github.com/joykangangi">Joy Kangangi</a></p></span><h4 class="">Parameters</h4><div class="table"><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>name</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The name of the field used to access the state when required in the form</p></div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>initial</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The initial value/state of the field. By default it is an empty string.</p></div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>transform</span></span></u></div></span></div><div><div class="title"><p class="paragraph">The function used to change the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> data type on the text field to a suitable type e.g <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> to <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a>.</p></div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><u><span><span>validators</span></span></u></div></span></div><div><div class="title"><p class="paragraph">This is the list of <a href="../-validators/index.html">Validators</a> that are used to validate the field state. By default the field states will have an empty list. You can override this and provide your own list of validators.</p></div></div></div></div></div><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-choice-state/index.html">ChoiceState</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="43306545%2FConstructors%2F-1802973628" anchor-label="TextFieldState" id="43306545%2FConstructors%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-text-field-state.html"><span>Text</span><wbr></wbr><span>Field</span><wbr></wbr><span><span>State</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="43306545%2FConstructors%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">initial<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">&quot;&quot;</span><span class="token punctuation">, </span></span><span class="parameter ">transform<span class="token operator">: </span><a href="../-transform/index.html">Transform</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">validators<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-validators/index.html">Validators</a><span class="token operator">&gt;</span><span class="token operator"> = </span>listOf()</span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1996102887%2FProperties%2F-1802973628" anchor-label="errorMessage" id="1996102887%2FProperties%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/error-message.html"><span>error</span><wbr></wbr><span><span>Message</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1996102887%2FProperties%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-base-state/error-message.html">errorMessage</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">This is the error message that is displayed when the field is invalid. You can access this property in order to display the error in the UI.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="941046168%2FProperties%2F-1802973628" anchor-label="hasError" id="941046168%2FProperties%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/has-error.html"><span>has</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="941046168%2FProperties%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">var </span><a href="../-base-state/has-error.html">hasError</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">This shows whether the state has an error or not. It is used to conditionally show the error on the UI. Once the state changes, this is set to false.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="617967152%2FProperties%2F-1802973628" anchor-label="initial" id="617967152%2FProperties%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/initial.html"><span><span>initial</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="617967152%2FProperties%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../-base-state/initial.html">initial</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1925923259%2FProperties%2F-1802973628" anchor-label="name" id="1925923259%2FProperties%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1925923259%2FProperties%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../-base-state/name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="750085448%2FProperties%2F-1802973628" anchor-label="transform" id="750085448%2FProperties%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/transform.html"><span><span>transform</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="750085448%2FProperties%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../-base-state/transform.html">transform</a><span class="token operator">: </span><a href="../-transform/index.html">Transform</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="585783013%2FProperties%2F-1802973628" anchor-label="validators" id="585783013%2FProperties%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/validators.html"><span><span>validators</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="585783013%2FProperties%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">val </span><a href="../-base-state/validators.html">validators</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../-validators/index.html">Validators</a><span class="token operator">&gt;</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-598600753%2FProperties%2F-1802973628" anchor-label="value" id="-598600753%2FProperties%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="value.html"><span><span>value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-598600753%2FProperties%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="value.html">value</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">A mutable value holder that reads to the initial parameter during the execution of a <a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/Composable.html">Composable</a> function, the current <a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/RecomposeScope.html">RecomposeScope</a> will be subscribed to changes of this value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1362608326%2FFunctions%2F-1802973628" anchor-label="change" id="-1362608326%2FFunctions%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="change.html"><span><span>change</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1362608326%2FFunctions%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="change.html"><span class="token function">change</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">update<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A function to update the <a href="https://developer.android.com/reference/kotlin/androidx/compose/runtime/RecomposeScope.html">RecomposeScope</a> with the latest <a href="value.html">value</a>. Once the <a href="value.html">value</a> changes it clears errors by the help of <a href="../-base-state/hide-error.html">BaseState.hideError</a></p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1188814036%2FFunctions%2F-1802973628" anchor-label="getData" id="1188814036%2FFunctions%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/get-data.html"><span>get</span><wbr></wbr><span><span>Data</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1188814036%2FFunctions%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="../-base-state/get-data.html"><span class="token function">getData</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">This function is used to get the data in the field. It is called by the <a href="../-form-state/index.html">FormState</a> class when the form is submitted. It calls the <a href="../-base-state/transform.html">transform</a> function to convert the data to whatever type is specified.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1082478578%2FFunctions%2F-1802973628" anchor-label="hideError" id="-1082478578%2FFunctions%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/hide-error.html"><span>hide</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1082478578%2FFunctions%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-base-state/hide-error.html"><span class="token function">hideError</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This method is the opposite of <a href="../-base-state/show-error.html">showError</a>. It is used to clear the error state. It sets the <a href="../-base-state/error-message.html">errorMessage</a> to an empty string and <a href="../-base-state/has-error.html">hasError</a> to false. On state update, this method is called to reset the field's unvalidated state.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1834361787%2FFunctions%2F-1802973628" anchor-label="reset" id="-1834361787%2FFunctions%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/reset.html"><span><span>reset</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1834361787%2FFunctions%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-base-state/reset.html"><span class="token function">reset</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This function resets all form field values to their initial states.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-823114981%2FFunctions%2F-1802973628" anchor-label="showError" id="-823114981%2FFunctions%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-base-state/show-error.html"><span>show</span><wbr></wbr><span><span>Error</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-823114981%2FFunctions%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">fun </span><a href="../-base-state/show-error.html"><span class="token function">showError</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">error<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">This function is used to update the state when an error is encountered. If a validation fails, this method is called with the error message and the error state is set. You can also use it if you're performing the validations manually.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="290758692%2FFunctions%2F-1802973628" anchor-label="validate" id="290758692%2FFunctions%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="validate.html"><span><span>validate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="290758692%2FFunctions%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="validate.html"><span class="token function">validate</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div><div class="brief "><p class="paragraph">This function is used to validate all text field inputs by checking against the corresponding validator from the list of <span data-unresolved-link="com.dsc.form_builder/TextFieldState/validators/#/PointingToDeclaration/">validators</span>. The validation checks are functions to validate the field values. and returns true only if all fields are valid. It is It is used in <a href="../-form-state/index.html">FormState</a> to confirm whether all fields in the form are valid.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

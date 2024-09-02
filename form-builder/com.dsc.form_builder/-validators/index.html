@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Validators</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            form-builder
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":form-builder:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="form-builder::com.dsc.form_builder/Validators///PointingToDeclaration//-1802973628">
+  <div class="breadcrumbs"><a href="../../../index.html">form-builder</a><span class="delimiter">/</span><a href="../index.html">com.dsc.form_builder</a><span class="delimiter">/</span><span class="current">Validators</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Validators</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">interface </span><a href="index.html">Validators</a></div><p class="paragraph">These are the types of validators available in the form builder library. They all have the <i>message</i> parameter to allow the developer to set their own custom error message.</p><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph"><a href="https://github.com/linusmuema">Linus Muema</a></p></span><h4 class="">Inheritors</h4><div class="table"><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-min/index.html">Min</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-max/index.html">Max</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-email/index.html">Email</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-phone/index.html">Phone</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-web-url/index.html">WebUrl</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-card-number/index.html">CardNumber</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-min-value/index.html">MinValue</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-max-value/index.html">MaxValue</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-required/index.html">Required</a></div></span></div><div></div></div></div><div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="-custom/index.html">Custom</a></div></span></div><div></div></div></div></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="-470091021%2FClasslikes%2F-1802973628" anchor-label="CardNumber" id="-470091021%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-card-number/index.html"><span>Card</span><wbr></wbr><span><span>Number</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-470091021%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-card-number/index.html">CardNumber</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>CARD_NUMBER_MESSAGE</span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This is a card number validator. It will return true if the string value is a valid card number.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-398593413%2FClasslikes%2F-1802973628" anchor-label="Custom" id="-398593413%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-custom/index.html"><span><span>Custom</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-398593413%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-custom/index.html">Custom</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>function<span class="token operator">: </span><span class="token punctuation">(</span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This is validator gives you the option to provide your own implementation of the validator. You can pass in a custom function to validate the field value.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1082377190%2FClasslikes%2F-1802973628" anchor-label="Email" id="-1082377190%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-email/index.html"><span><span>Email</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1082377190%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-email/index.html">Email</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>EMAIL_MESSAGE</span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This is an email validator. It will return true if the string value is a valid email address. The implementation makes use of the <a href="https://developer.android.com/reference/kotlin/android/util/Patterns.html">android.util.Patterns</a> class to match the email address.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1003966318%2FClasslikes%2F-1802973628" anchor-label="Max" id="-1003966318%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-max/index.html"><span><span>Max</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1003966318%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-max/index.html">Max</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This validator is also used to check for values in the state. Unlike the <a href="-min/index.html">Min</a> validator, it will return true if the values are less than the specified limit.  In <a href="../-text-field-state/index.html">TextFieldState</a> this is used to check for the maximum number of characters while in <a href="../-select-state/index.html">SelectState</a>, it is used to check for the maximum number of options selected.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-161801153%2FClasslikes%2F-1802973628" anchor-label="MaxValue" id="-161801153%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-max-value/index.html"><span>Max</span><wbr></wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-161801153%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-max-value/index.html">MaxValue</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This validator is also used to check for numeric values. It will return true is the value is numeric and is less than or equal to the specified limit.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2083780452%2FClasslikes%2F-1802973628" anchor-label="Min" id="2083780452%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-min/index.html"><span><span>Min</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2083780452%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-min/index.html">Min</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This validator is used to check for number of values in the state. It will return true if the values are more than the specified limit. In <a href="../-text-field-state/index.html">TextFieldState</a> this is used to check for the minimum number of characters while in <a href="../-select-state/index.html">SelectState</a>, it is used to check for the minimum number of options selected.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1724205229%2FClasslikes%2F-1802973628" anchor-label="MinValue" id="1724205229%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-min-value/index.html"><span>Min</span><wbr></wbr><span><span>Value</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1724205229%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-min-value/index.html">MinValue</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>limit<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This validator is used to check for numeric values. It will return true is the value is numeric and is greater than or equal to the specified limit.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="896178824%2FClasslikes%2F-1802973628" anchor-label="Phone" id="896178824%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-phone/index.html"><span><span>Phone</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="896178824%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-phone/index.html">Phone</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>PHONE_MESSAGE</span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This is a phone validator. It will return true if the string value is a valid phone number. The implementation makes use of the <a href="https://developer.android.com/reference/kotlin/android/util/Patterns.html">android.util.Patterns</a> class to match the phone number.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1733887821%2FClasslikes%2F-1802973628" anchor-label="Required" id="1733887821%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-required/index.html"><span><span>Required</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1733887821%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-required/index.html">Required</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>REQUIRED_MESSAGE</span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This is a required validator. It will return true if the value is not empty.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1109306289%2FClasslikes%2F-1802973628" anchor-label="WebUrl" id="1109306289%2FClasslikes%2F-1802973628" data-filterable-set=":form-builder:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":form-builder:dokkaHtml/release" data-filterable-set=":form-builder:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-web-url/index.html"><span>Web</span><wbr></wbr><span><span>Url</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1109306289%2FClasslikes%2F-1802973628"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":form-builder:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="-web-url/index.html">WebUrl</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">var </span>message<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>WEB_URL_MESSAGE</span></span><span class="token punctuation">)</span> : <a href="index.html">Validators</a></div><div class="brief "><p class="paragraph">This is a web url validator. It will return true if the string value is a valid web url.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
