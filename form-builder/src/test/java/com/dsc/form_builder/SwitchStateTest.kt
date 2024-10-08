@@ -49,5 +49,15 @@ internal class SwitchStateTest {
 			val secondValidation = classToTest.validateRequired("")
 			assert(secondValidation)
 		}
+		
+		@Test
+		fun `setData works correctly`() {
+			val value = true
+			classToTest.setData(value)
+			assert(classToTest.value == value)
+			
+			classToTest.setData(false)
+			assert(classToTest.value == false)
+		}
 	}
 }
