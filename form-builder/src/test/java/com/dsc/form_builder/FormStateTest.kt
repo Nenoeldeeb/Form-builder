@@ -5,6 +5,15 @@ import org.junit.jupiter.api.Test
 
 
 internal class FormStateTest {
+	internal data class FormTestDataClass(
+		val email: String,
+		val hobbies: List<String>,
+		val gender: String,
+		val age: String,
+		val active: Boolean,
+		private val date: Int = 0
+	)
+	
 	@Nested
 	inner class DescribingFormState {
 		
@@ -45,6 +54,46 @@ internal class FormStateTest {
 			assert(genderState.value == "" && !genderState.hasError)
 			assert(ageState.value == "34" && !ageState.hasError)
 			assert(!statusState.value && !statusState.hasError)
+		}
+		
+		@Test
+		fun `getData gets the form's data correctly`() {
+			ageState.change("16")
+			emailState.change("testget@form.com")
+			hobbyState.select("Running")
+			hobbyState.select("Reading")
+			genderState.change("male")
+			statusState.toggle()
+			
+			val data = formState.getData(FormTestDataClass::class)
+			
+			assert(data.email == emailState.value)
+			assert(data.hobbies == hobbyState.value)
+			assert(data.gender == genderState.value)
+			assert(data.age == ageState.value)
+		}
+		
+		@Test
+		fun `setData should set the correct values`() {
+			val data = FormTestDataClass(
+				email = "buider@gmail.com",
+				hobbies = listOf(
+					"Running",
+					"Reading"
+				),
+				gender = "male",
+				age = "56",
+				active = true,
+				date = 12
+			)
+			formState.setData(data)
+			
+			val data2 = formState.getData(FormTestDataClass::class)
+			assert(data2.email == data.email)
+			assert(data2.hobbies == data.hobbies)
+			assert(data2.gender == data.gender)
+			assert(data2.age == data.age)
+			assert(data2.active == data.active)
 		}
 	}
 }
