@@ -9,122 +9,171 @@ import org.junit.jupiter.params.provider.ArgumentsSource
 
 internal class TextFieldStateTest {
 
-    @Nested
-    inner class DescribingStateChanges {
-        private val classToTest: TextFieldState = TextFieldState(name = "")
+	@Nested
+	inner class DescribingStateChanges {
 
-        @Test
-        fun `errors should be hidden`() {
-            // Simulate an existing validation error
-            classToTest.hasError = true
-            classToTest.errorMessage = "error message"
+		private val classToTest: TextFieldState = TextFieldState(name = "")
 
-            val newValue = "new value"      // Given a TextFieldState and a new value
-            classToTest.change(newValue)    // When change is called
+		@Test
+		fun `errors should be hidden`() {
+			// Simulate an existing validation error
+			classToTest.hasError = true
+			classToTest.errorMessage = "error message"
 
-            assert(!classToTest.hasError)
-            assert(classToTest.errorMessage.isEmpty())
-        }
+			val newValue = "new value"      // Given a TextFieldState and a new value
+			classToTest.change(newValue)    // When change is called
 
-        @Test
-        fun `state should be updated`() {
-            val newValue = "new value"      // Given a TextFieldState and a new value
-            classToTest.change(newValue)    // When change is called
+			assert(!classToTest.hasError)
+			assert(classToTest.errorMessage.isEmpty())
+		}
 
-            assert(classToTest.value == "new value")
-        }
+		@Test
+		fun `state should be updated`() {
+			val newValue = "new value"      // Given a TextFieldState and a new value
+			classToTest.change(newValue)    // When change is called
 
-    }
+			assert(classToTest.value == "new value")
+		}
 
-    @Nested
-    inner class DescribingValidation {
+	}
 
-        private val classToTest: TextFieldState = TextFieldState(name = "")
+	@Nested
+	inner class DescribingValidation {
 
-        @Test
-        fun `Validators_Required works correctly`() {
+		private val classToTest: TextFieldState = TextFieldState(name = "")
 
-            // Verify when state hasn't changed
-            val firstActual = classToTest.validateRequired("")
-            assert(!firstActual)
+		@Test
+		fun `Validators_Required works correctly`() {
 
-            // Verify when state has changed
-            classToTest.change("non-empty")
-            val secondActual = classToTest.validateRequired("")
-            assert(secondActual)
-        }
+			// Verify when state hasn't changed
+			val firstActual = classToTest.validateRequired("")
+			assert(!firstActual)
 
-        @ParameterizedTest
-        @ArgumentsSource(EmailArgumentsProvider::class)
-        fun `Validators_Email works correctly`(email: String, expected: Boolean) {
-            classToTest.change(email)
+			// Verify when state has changed
+			classToTest.change("non-empty")
+			val secondActual = classToTest.validateRequired("")
+			assert(secondActual)
+		}
 
-            val actual = classToTest.validateEmail("expected validation: $expected")
-            assert(actual == expected)
-        }
+		@ParameterizedTest
+		@ArgumentsSource(EmailArgumentsProvider::class)
+		fun `Validators_Email works correctly`(
+			email: String,
+			expected: Boolean
+		) {
+			classToTest.change(email)
 
-        @ParameterizedTest
-        @ArgumentsSource(PhoneArgumentsProvider::class)
-        fun `Validators_Phone works correctly`(phone: String, expected: Boolean) {
-            classToTest.change(phone)
+			val actual = classToTest.validateEmail("expected validation: $expected")
+			assert(actual == expected)
+		}
 
-            val actual = classToTest.validatePhone("expected validation: $expected")
-            assert(actual == expected)
-        }
+		@ParameterizedTest
+		@ArgumentsSource(PhoneArgumentsProvider::class)
+		fun `Validators_Phone works correctly`(
+			phone: String,
+			expected: Boolean
+		) {
+			classToTest.change(phone)
 
-        @ParameterizedTest
-        @ArgumentsSource(WebUrlArgumentsProvider::class)
-        fun `Validators_WebUrl works correctly`(webUrl: String, expected: Boolean) {
-            classToTest.change(webUrl)
+			val actual = classToTest.validatePhone("expected validation: $expected")
+			assert(actual == expected)
+		}
 
-            val actual = classToTest.validateWebUrl("expected validation: $expected")
-            assert(actual == expected)
-        }
+		@ParameterizedTest
+		@ArgumentsSource(WebUrlArgumentsProvider::class)
+		fun `Validators_WebUrl works correctly`(
+			webUrl: String,
+			expected: Boolean
+		) {
+			classToTest.change(webUrl)
 
-        @ParameterizedTest
-        @ArgumentsSource(CardNumberArgumentsProvider::class)
-        fun `Validators_CardNumber works correctly`(cardNumber: String, expected: Boolean) {
-            classToTest.change(cardNumber)
+			val actual = classToTest.validateWebUrl("expected validation: $expected")
+			assert(actual == expected)
+		}
 
-            val actual = classToTest.validateCardNumber("expected validation: $expected")
-            assert(actual == expected)
-        }
+		@ParameterizedTest
+		@ArgumentsSource(CardNumberArgumentsProvider::class)
+		fun `Validators_CardNumber works correctly`(
+			cardNumber: String,
+			expected: Boolean
+		) {
+			classToTest.change(cardNumber)
 
-        @ParameterizedTest
-        @ArgumentsSource(MinCharsArgumentsProvider::class)
-        fun `Validators_MinChars works correctly`(value: String, limit: Int, expected: Boolean) {
-            classToTest.change(value)
+			val actual = classToTest.validateCardNumber("expected validation: $expected")
+			assert(actual == expected)
+		}
 
-            val actual = classToTest.validateMinChars(limit, "expected validation: $expected")
-            assert(actual == expected)
-        }
+		@ParameterizedTest
+		@ArgumentsSource(MinCharsArgumentsProvider::class)
+		fun `Validators_MinChars works correctly`(
+			value: String,
+			limit: Int,
+			expected: Boolean
+		) {
+			classToTest.change(value)
 
-        @ParameterizedTest
-        @ArgumentsSource(MaxCharsArgumentsProvider::class)
-        fun `Validators_MaxChars works correctly`(value: String, limit: Int, expected: Boolean) {
-            classToTest.change(value)
+			val actual = classToTest.validateMinChars(
+				limit,
+				"expected validation: $expected"
+			)
+			assert(actual == expected)
+		}
 
-            val actual = classToTest.validateMaxChars(limit, "expected validation: $expected")
-            assert(actual == expected)
-        }
+		@ParameterizedTest
+		@ArgumentsSource(MaxCharsArgumentsProvider::class)
+		fun `Validators_MaxChars works correctly`(
+			value: String,
+			limit: Int,
+			expected: Boolean
+		) {
+			classToTest.change(value)
 
-        @ParameterizedTest
-        @ArgumentsSource(MinValueArgumentsProvider::class)
-        fun `Validators_MinValue works correctly`(value: String, limit: Int, expected: Boolean) {
-            classToTest.change(value)
+			val actual = classToTest.validateMaxChars(
+				limit,
+				"expected validation: $expected"
+			)
+			assert(actual == expected)
+		}
 
-            val actual = classToTest.validateMinValue(limit, "expected validation: $expected")
-            assert(actual == expected)
-        }
+		@ParameterizedTest
+		@ArgumentsSource(MinValueArgumentsProvider::class)
+		fun `Validators_MinValue works correctly`(
+			value: String,
+			limit: Int,
+			expected: Boolean
+		) {
+			classToTest.change(value)
 
-        @ParameterizedTest
-        @ArgumentsSource(MaxValueArgumentsProvider::class)
-        fun `Validators_MaxValue works correctly`(value: String, limit: Int, expected: Boolean) {
-            classToTest.change(value)
+			val actual = classToTest.validateMinValue(
+				limit,
+				"expected validation: $expected"
+			)
+			assert(actual == expected)
+		}
 
-            val actual = classToTest.validateMaxValue(limit, "expected validation: $expected")
-            assert(actual == expected)
-        }
+		@ParameterizedTest
+		@ArgumentsSource(MaxValueArgumentsProvider::class)
+		fun `Validators_MaxValue works correctly`(
+			value: String,
+			limit: Int,
+			expected: Boolean
+		) {
+			classToTest.change(value)
+
+			val actual = classToTest.validateMaxValue(
+				limit,
+				"expected validation: $expected"
+			)
+			assert(actual == expected)
+		}
+
+		@Test
+		fun `setData works correctly`() {
+			val value = "test"
+			classToTest.setData(value)
+			assert(classToTest.value == value)
+		}
+
 
         @ParameterizedTest
         @ArgumentsSource(DateArgumentsProvider::class)
@@ -134,5 +183,5 @@ internal class TextFieldStateTest {
             val actual = classToTest.validateDate("expected validation: $expected", pattern)
             assert(actual == expected)
         }
-    }
+	}
 }
