@@ -2,6 +2,7 @@ package com.dsc.form_builder
 
 import kotlin.reflect.KClass
 import kotlin.reflect.KParameter
+import kotlin.reflect.full.memberProperties
 
 /**
  * This class represents the state of the whole form, i.e, the whole collection of fields. It is used to manage all of the states in terms of accessing data and validations.
@@ -36,24 +37,41 @@ open class FormState<T : BaseState<*>>(val fields: List<T>) {
             if (!it.isOptional) {
                 checkNotNull(value) {
                     """
-                        A non-null value (${it.name}) in your class doesn't have a matching field in the form data. 
+                        A non-null value (${it.name}) in your class doesn't have a matching field in the form data.
                         This will throw a NullPointerException when creating $dataClass. To solve this, you can:
                         1. Make the value nullable in your data class
                         2. Provide a default value for the parameter
                     """.trimIndent()
-                }
-                args[it] = value
-            }
-        }
-        return constructor.callBy(args)
-    }
+				}
+				args[it] = value
+			}
+		}
+		return constructor.callBy(args)
+	}
 
-    /**
-     * This function is used to reset data in all the form fields to their initial values.
-     */
-    fun reset() {
-        fields.map {
-            it.reset()
-        }
-    }
+	/**
+	 * Set the form fields value to data argument properties.
+	 *
+	 * @param data The data source for the form values, which must be a data class.
+	 * */
+	fun setData(data: Any) {
+		require(data::class.isData) {
+			"Data must be a data class"
+		}
+		data::class.memberProperties.forEach { property ->
+			if (property.visibility.toString() != "PRIVATE") {
+				val value = property.call(data)
+				fields.find { it.name == property.name }?.setData(value!!)
+			}
+		}
+	}
+
+	/**
+	 * This function is used to reset data in all the form fields to their initial values.
+	 */
+	fun reset() {
+		fields.map {
+			it.reset()
+		}
+	}
 }
