@@ -2,6 +2,8 @@ package com.dsc.form_builder.format
 
 /**
  * These are the formatting options for the [DateFormatter] class.
+ *
+ * @author [Joy Kangangi](https://github.com/joykangangi)
  */
 enum class DateFormat(val pattern: String) {
     DDMMYYYY("ddMMuuuu"),
@@ -12,7 +14,17 @@ enum class DateFormat(val pattern: String) {
     YYMMDD("uuMMdd")
 }
 
-// Get the index where to place the separator
+/**
+ * Determines the indices where separators should be placed in a [DateFormat].
+ *
+ * This function iterates over the characters of the [DateFormat] string representation
+ * and identifies the positions where the format changes, such as from one character type to another.
+ * These positions are used to insert separators between different segments of the date format.
+ *
+ * @return A mutable list of integers representing the positions where separators should be placed.
+ *
+ * @author [Linus Muema](https://github.com/linusmuema)
+ */
 private fun DateFormat.separatorIndices(): MutableList<Int> {
     val indices = mutableListOf<Int>()
     val stringFormat = this.toString()
@@ -36,6 +48,8 @@ private fun DateFormat.separatorIndices(): MutableList<Int> {
  * The formatting function places the separator in the respective index as the user types.
  *
  * Note: character limiting is not supported in the formatter.
+ *
+ * @author [Linus Muema](https://github.com/linusmuema)
  */
 
 class DateFormatter(private val dateFormat: DateFormat, private val separator: String) : Formatter {

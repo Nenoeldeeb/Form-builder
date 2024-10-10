@@ -16,6 +16,7 @@ import androidx.compose.runtime.*
  *
  * @param validators a list of [Validators] applied to the state's value.
  *
+ * @author [Samwel Otieno](https://github.com/otienosamwel)
  */
 class SelectState(
     name: String,

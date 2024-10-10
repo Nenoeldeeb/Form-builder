@@ -13,6 +13,9 @@ private const val DATE_MESSAGE = "Invalid date"
  *
  * These are the types of validators available in the form builder library.
  * They all have the _message_ parameter to allow the developer to set their own custom error message.
+ *
+ * @author [Linus Muema](https://github.com/linusmuema)
+ * @created 05/04/2022 - 10:00 AM
  */
 sealed interface Validators {
 

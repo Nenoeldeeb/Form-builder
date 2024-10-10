@@ -19,10 +19,12 @@ import java.time.format.ResolverStyle
  *
  * @param name The name of the field used to access the state when required in the form
  * @param initial The initial value/state of the field. By default it is an empty string.
- * @param formatter The formatting option for the field.
  * @param transform The function used to change the [String] data type on the text field to a suitable type e.g [String] to [Int].
  * @param validators This is the list of [Validators] that are used to validate the field state. By default the field states will have an empty list. You can override this and provide your own list of validators.
+ * @param formatter The formatting option for the field.
  *
+ * @author [Joy Kangangi](https://github.com/joykangangi)
+ * @created 06/04/2022
  */
 open class TextFieldState(
     name: String,
