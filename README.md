@@ -1,4 +1,4 @@
-[![](https://jitpack.io/v/jkuatdsc/form-builder.svg)](https://jitpack.io/#jkuatdsc/form-builder)
+[![](https://jitpack.io/v/Nenoeldeeb/form-builder.svg)](https://jitpack.io/#Nenoeldeeb/form-builder)
 
 
 ## Jetpack Compose FormBuilder
@@ -30,7 +30,7 @@ Then add the following to your module's `build.gradle`
 
 ```kotlin
 dependencies {
-    implementation("com.github.jkuatdsc:form-builder:${version}")
+    implementation("com.github.Nenoeldeeb:form-builder:${version}")
 }
 ```
 
@@ -96,7 +96,7 @@ if (formState.validate()) {
     Log.d("Data", "submit: data from the form $data")
 }
 ```
-Here is what the `Credentials` data class looks like. Take note of how the property names correspond to the field values 
+Here is what the `Credentials` data class looks like. Take note of how the property names correspond to the field values
 passed when instantiating the form state.
 
 ```Kotlin
@@ -138,7 +138,7 @@ You can find the sample apk [here](https://drive.google.com/file/d/1tMtDtJwuDZoQ
 ### <a id="links" href="#links">Further Reading</a>
 
 The links below provide a reinforced understanding to the library.
-* [Form Builder Documentation](https://jkuatdsc.github.io/form-builder/).
+* [Form Builder Documentation](https://Nenoeldeeb.github.io/form-builder/).
 * [Introduction to Form Builder basics](https://www.section.io/engineering-education/jetpack-compose-forms/)
 * [Advanced Form Builder operations guide](https://www.section.io/engineering-education/making-jetpack-form-builder/)
 
@@ -175,24 +175,24 @@ We appreciate your interest in contributing to our project! To ensure a smooth a
   - A summary of the changes.
   - Any relevant issue references (e.g., "Closes #issue-number")
   - Details about any potential impact on existing functionality.
-    
+
 #### 6. Code Review
 - Wait for a code review from maintainers or team members. Address any feedback by making further changes and pushing them to the same feature branch.
 
 #### 7. Merge into Develop
 - After approval and successful tests, your PR will be merged into the `develop` branch.
-  
+
 #### 8. Merging to Main
 - Once the changes in `develop` are stable, they will be merged into the `main` branch as part of a release cycle.
-  
+
 #### 9. Updating Documentation
 - If your changes require updates to the documentation, ensure you update the relevant files or create new ones before submitting your PR.
-  
+
 #### 10. Best Practices
 - Write tests for any new features or bug fixes.
 - Follow the existing coding standards and style guides used in the project.
 - Ensure that your changes pass any automated tests and that the project builds successfully.
-  
+
 #### 11. Contribution Etiquette
 - Do not maliciously delete any library functionality, change the name or package of the library, or amend any library information unless there is a well-justified reason for doing so.
 - Be respectful and collaborative when communicating with other contributors or maintainers.
